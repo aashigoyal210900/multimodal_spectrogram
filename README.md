@@ -17,3 +17,6 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   
 * Run ```wav_to_melspec.py``` to convert WAV audio files to Mel spectrograms<br>
   ```$ python3 wav_to_melspec.py input_folder output_folder```
+
+#### Resources
+Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum
