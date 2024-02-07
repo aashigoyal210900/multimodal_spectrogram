@@ -1,9 +1,0 @@
-FLV to WAV conversion
-
-* Install ffmpeg
-brew install ffmpeg (for macOS)
-sudo apt-get install ffmpeg (for Linux)
-python3 -m pip install ffmpeg (as Python Package)
-
-* Run flv_to_wav.py
-python3 flv_to_wav.py input_folder output_folder
