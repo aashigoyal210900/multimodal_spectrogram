@@ -27,7 +27,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
 
 #### Findings
-* Model: [models.resnet18(weights='DEFAULT')](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
+* Model: models.resnet18(weights='DEFAULT')
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: Mel spectrograms
     * Total number of samples: ```273```
@@ -42,6 +42,10 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Train Accuracy: ```0.9895```
         * Test Loss: ```0.6576```
         * Test Accuracy: ```0.8902```
+    * Reproduce:
+        * Notebook: [```notebooks/melspec_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/melspec_to_features_cnn.ipynb)
+        * Script: [```scripts/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/melspec_to_features_cnn.py)
+        * Saved Model: [ResNet18_melspec_50_32_0.001](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
 
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
