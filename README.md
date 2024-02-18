@@ -22,9 +22,28 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   ```$ python3 -m pip install torch torchvision pillow```
   > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
   
-* Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using pre-trained ResNet-18<br>
+* Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br>
   ```$ python3 -m melspec_to_features_cnn.py input_folder```
-  > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both
+  <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
+
+#### Findings
+* Model: [models.resnet18(weights='DEFAULT')](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model fine-tuned on: Mel spectrograms
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```32```
+    * lr: ```0.001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.5624``` 
+        * Train Accuracy: ```0.9895```
+        * Test Loss: ```0.6576```
+        * Test Accuracy: ```0.8902```
 
 #### Resources
-Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum
+<!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
+[GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
+[GDoc](https://docs.google.com/document/d/1jN6ZpCUjqboJQLSFR-Osqlm5kRHGYX2a47GRADVYUPU/edit?usp=sharing)
