@@ -27,7 +27,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
 
 #### Findings
-* Model: models.resnet18(weights='DEFAULT')
+* Experiment: Fine-tune ResNet18 on Mel spectrograms generated from a subset of CREMA-D
+    * Model: models.resnet18(weights='DEFAULT')
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: Mel spectrograms
     * Total number of samples: ```273```
