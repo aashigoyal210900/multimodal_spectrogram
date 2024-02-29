@@ -48,7 +48,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/melspec_to_features_cnn.py)
         * Saved Model: [ResNet18_melspec_50_32_0.001](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
 
-* Experiment: Fine-tune ResNet18 on frames extracted out of videos from a subset of CREMA-D with one-second granularity
+* Experiment: Fine-tune ResNet18 on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
     * Model: models.resnet18(weights='DEFAULT')
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: averaged one-second granular frames
@@ -60,10 +60,10 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.6535``` 
-        * Train Accuracy: ```0.9058```
-        * Test Loss: ```1.0802```
-        * Test Accuracy: ```0.4390```
+        * Train Loss: ```0.5809``` 
+        * Train Accuracy: ```0.9686```
+        * Test Loss: ```0.7736```
+        * Test Accuracy: ```0.7805```
     * Reproduce:
         * Notebook: [```notebooks/video_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/video_to_features_cnn.ipynb)
         * Script: [```scripts/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/video_to_features_cnn.py)
