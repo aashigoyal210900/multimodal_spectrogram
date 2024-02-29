@@ -46,7 +46,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3415```
     * Reproduce:
         * Notebook: [```notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb)
-        * Script: [```scripts/pretrained/melspec_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/melspec_to_features_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/melspec_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/melspec_to_features_pretrained_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 * Experiment: Check performance of pre-trained ResNet18 on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
@@ -67,7 +67,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3659```
     * Reproduce:
         * Notebook: [```notebooks/pretrained/video_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/video_to_features_pretrained_cnn.ipynb)
-        * Script: [```scripts/pretrained/video_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/video_to_features_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/video_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/video_to_features_pretrained_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 * Experiment: Fine-tune ResNet18 on Mel spectrograms generated from a subset of CREMA-D
@@ -151,7 +151,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3171```
     * Reproduce:
         * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-cross/melspec_to_features_video_cnn.ipynb)
+        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-cross/melspec_to_features_video_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 #### Resources
