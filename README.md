@@ -65,9 +65,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```1.0802```
         * Test Accuracy: ```0.4390```
     * Reproduce:
-        * Notebook: [```notebooks/videos_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/video_to_features_cnn.ipynb)
-        * Script: [```scripts/videos_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/video_to_features_cnn.py)
-        * Saved Model: [ResNet18_videos_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link)
+        * Notebook: [```notebooks/video_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/video_to_features_cnn.ipynb)
+        * Script: [```scripts/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/video_to_features_cnn.py)
+        * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link)
 
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
