@@ -10,6 +10,9 @@ Original file is located at
 # from google.colab import drive
 # drive.mount('/content/drive')
 
+# !python3 -m pip install facenet-pytorch
+# !python3 -m pip install face_alignment
+
 import cv2
 import os
 import sys
@@ -19,9 +22,13 @@ import torch.optim as optim
 import torchvision.transforms as transforms
 from torchvision import models
 from PIL import Image
+from facenet_pytorch import MTCNN
 from sklearn.model_selection import train_test_split
 import numpy as np
 from tqdm import tqdm
+import face_alignment
+import dlib
+import requests
 
 class CNN(nn.Module):
     def __init__(self, num_classes):
@@ -38,71 +45,232 @@ class CNN(nn.Module):
         x = self.softmax(x)
         return x
 
-def extract_average_frames(video_path):
+def extract_frame(video_path):
     cap = cv2.VideoCapture(video_path)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     fps = cap.get(cv2.CAP_PROP_FPS)
-    interval_frames = int(fps) # Frames to skip to get 1 frame per second
-    frames = []
-    for i in range(0, frame_count, interval_frames):
-        cap.set(cv2.CAP_PROP_POS_FRAMES, i)
-        ret, frame = cap.read()
-        if ret:
-            frames.append(frame)
-    cap.release()
-    # Calculate average frame
-    averaged_frame = sum(frames) / len(frames)
-    return averaged_frame
+    mid_frame_index = frame_count // 2  # Index of the frame in the middle of the video
+    cap.set(cv2.CAP_PROP_POS_FRAMES, mid_frame_index)
+    ret, frame = cap.read()
+    if ret:
+        cap.release()
+        return frame
+    else:
+        cap.release()
+        return None
 
-# def preprocess_image(averaged_frame):
-#     # Convert the NumPy array to a PIL Image
-#     averaged_frame_pil = Image.fromarray(averaged_frame.astype('uint8'))
+def detect_face(frame):
+    mtcnn = MTCNN()
+    boxes, _ = mtcnn.detect(frame)
+    if boxes is not None:
+        # Assuming only one face in the frame
+        box = boxes[0]
+        x1, y1, x2, y2 = box
+        # Crop the frame to the detected face
+        cropped_frame = frame[int(y1):int(y2), int(x1):int(x2)]
+        return cropped_frame
+    else:
+        return None
 
-#     # Resize and normalize the averaged frame
-#     transform = transforms.Compose([
-#         transforms.Resize((224, 224)),
-#         transforms.ToTensor(),
-#         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-#     ])
-#     img_tensor = transform(averaged_frame_pil)
-#     return img_tensor
+# def align_face(frame):
+#     fa = face_alignment.FaceAlignment(face_alignment.LandmarksType.FACE_2D, flip_input=False)
+#     landmarks = fa.get_landmarks(frame)
+#     if landmarks is not None:
+#         aligned_face = fa.align(frame, landmarks)
+#         return aligned_face
+#     else:
+#         return None
 
-def preprocess_image(averaged_frame):
-    # Convert the NumPy array to a PIL Image
-    averaged_frame_pil = Image.fromarray(averaged_frame.astype('uint8'))
+# import dlib
+# import requests
+
+# # Function to download the pretrained shape predictor file if it doesn't exist
+# def download_shape_predictor_file(url, save_path):
+#     if not os.path.exists(save_path):
+#         print("Downloading pretrained shape predictor file...")
+#         response = requests.get(url)
+#         with open(save_path, 'wb') as f:
+#             f.write(response.content)
+#         print("Download complete.")
+
+# # Specify the URL of the pretrained shape predictor file
+# shape_predictor_url = "https://github.com/davisking/dlib-models/raw/master/shape_predictor_68_face_landmarks.dat"
+
+# def align_face(frame):
+#     # Download the pretrained shape predictor file if it doesn't exist
+#     shape_predictor_path = os.path.abspath("shape_predictor_68_face_landmarks.dat")
+#     download_shape_predictor_file(shape_predictor_url, shape_predictor_path)
+
+#     # Initialize face detector and shape predictor
+#     detector = dlib.get_frontal_face_detector()
+#     predictor = dlib.shape_predictor(shape_predictor_path)
+
+#     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#     rects = detector(gray, 0)
+
+#     if len(rects) == 1:  # Assuming only one face in the frame
+#         landmarks = predictor(gray, rects[0])
+#         aligned_face = dlib.get_face_chip(frame, landmarks)
+#         return aligned_face
+#     else:
+#         return None
+
+# import cv2
+# import face_alignment
+# import requests
+# import os
+
+# Function to download the pretrained face alignment model if it doesn't exist
+def download_face_alignment_model(url, save_path):
+    if not os.path.exists(save_path):
+        print("Downloading pretrained face alignment model...")
+        response = requests.get(url)
+        with open(save_path, 'wb') as f:
+            f.write(response.content)
+        print("Download complete.")
+
+# Specify the URL of the pretrained face alignment model
+face_alignment_model_url = "https://github.com/1adrianb/face-alignment-models/releases/download/2.0.1/2DFAN4-11f355bf06.pth.tar"
+
+# Download the pretrained face alignment model if it doesn't exist
+face_alignment_model_path = os.path.abspath("2DFAN4-11f355bf06.pth.tar")
+download_face_alignment_model(face_alignment_model_url, face_alignment_model_path)
+
+# Initialize face alignment model
+fa = face_alignment.FaceAlignment(2, flip_input=False)  # 2 corresponds to 2D landmarks
+
+def align_face(frame):
+    # Perform face alignment
+    aligned_faces = fa.get_landmarks(frame)
+    if aligned_faces is not None:
+        aligned_face = aligned_faces[0]  # Assuming only one face in the frame
+        return aligned_face
+    else:
+        return None
+
+def preprocess_image(frame):
+    # Convert the frame to a PIL Image
+    frame_pil = Image.fromarray(frame.astype('uint8'))
 
     # Convert the image to grayscale
-    averaged_frame_pil = averaged_frame_pil.convert('L')
+    frame_pil = frame_pil.convert('L')
 
-    # Resize and normalize the averaged frame
+    # Resize and normalize the frame
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485], std=[0.229]),  # For grayscale images, only 1 channel
     ])
-    img_tensor = transform(averaged_frame_pil)
+    img_tensor = transform(frame_pil)
     return img_tensor
 
 def load_dataset(input_folder):
     X = []
     y = []
-    # List all video files in the input folder
     video_files = [file for file in os.listdir(input_folder) if file.endswith(".flv")]
-    for video_file in video_files:
+    for video_file in tqdm(video_files):
         video_path = os.path.join(input_folder, video_file)
-        averaged_frame = extract_average_frames(video_path)
-        img_tensor = preprocess_image(averaged_frame)
-        X.append(img_tensor)
-        # Extract label from video filename (assuming filename is in format "label_videoID.mp4")
-        label = video_file.split("_")[2]
-        if label == "HAP":
-            y.append(0)
-        elif label == "SAD":
-            y.append(1)
-        elif label == "ANG":
-            y.append(2)
-        # print(video_path, label)
+        frame = extract_frame(video_path)
+        if frame is not None:
+            cropped_face = detect_face(frame)
+            if cropped_face is not None:
+                preprocessed_face = preprocess_image(cropped_face)
+                X.append(preprocessed_face)
+                label = video_file.split("_")[2].split(".")[0]  # Adjusted to handle different file extensions
+                if label == "HAP":
+                    y.append(0)
+                elif label == "SAD":
+                    y.append(1)
+                elif label == "ANG":
+                    y.append(2)
+            else:
+                print(f"No face detected in {video_file}. Skipping.")
+        else:
+            print(f"Failed to extract frame from {video_file}. Skipping.")
     return X, y
+
+# def load_dataset(input_folder):
+#     X = []
+#     y = []
+#     video_files = [file for file in os.listdir(input_folder) if file.endswith(".flv")]
+#     for video_file in tqdm(video_files):
+#         video_path = os.path.join(input_folder, video_file)
+#         frame = extract_frame(video_path)
+#         # crop and align
+#         if frame is not None:
+#             cropped_face = detect_face(frame)
+#             if cropped_face is not None:
+#                 aligned_face = align_face(cropped_face)
+#                 if aligned_face is not None:
+#                     preprocessed_face = preprocess_image(aligned_face)
+#                     X.append(preprocessed_face)
+#                     label = video_file.split("_")[2].split(".")[0]  # Adjusted to handle different file extensions
+#                     if label == "HAP":
+#                         y.append(0)
+#                     elif label == "SAD":
+#                         y.append(1)
+#                     elif label == "ANG":
+#                         y.append(2)
+#                 else:
+#                     print(f"Failed to align face in {video_file}. Skipping.")
+#             else:
+#                 print(f"No face detected in {video_file}. Skipping.")
+#         else:
+#             print(f"Failed to extract frame from {video_file}. Skipping.")
+#     return X, y
+
+# def extract_average_frames(video_path):
+#     cap = cv2.VideoCapture(video_path)
+#     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+#     fps = cap.get(cv2.CAP_PROP_FPS)
+#     interval_frames = int(fps) # Frames to skip to get 1 frame per second
+#     frames = []
+#     for i in range(0, frame_count, interval_frames):
+#         cap.set(cv2.CAP_PROP_POS_FRAMES, i)
+#         ret, frame = cap.read()
+#         if ret:
+#             frames.append(frame)
+#     cap.release()
+#     # Calculate average frame
+#     averaged_frame = sum(frames) / len(frames)
+#     return averaged_frame
+
+# def preprocess_image(averaged_frame):
+#     # Convert the NumPy array to a PIL Image
+#     averaged_frame_pil = Image.fromarray(averaged_frame.astype('uint8'))
+
+#     # Convert the image to grayscale
+#     averaged_frame_pil = averaged_frame_pil.convert('L')
+
+#     # Resize and normalize the averaged frame
+#     transform = transforms.Compose([
+#         transforms.Resize((224, 224)),
+#         transforms.ToTensor(),
+#         transforms.Normalize(mean=[0.485], std=[0.229]),  # For grayscale images, only 1 channel
+#     ])
+#     img_tensor = transform(averaged_frame_pil)
+#     return img_tensor
+
+# def load_dataset(input_folder):
+#     X = []
+#     y = []
+#     # List all video files in the input folder
+#     video_files = [file for file in os.listdir(input_folder) if file.endswith(".flv")]
+#     for video_file in video_files:
+#         video_path = os.path.join(input_folder, video_file)
+#         averaged_frame = extract_average_frames(video_path)
+#         img_tensor = preprocess_image(averaged_frame)
+#         X.append(img_tensor)
+#         # Extract label from video filename (assuming filename is in format "label_videoID.mp4")
+#         label = video_file.split("_")[2]
+#         if label == "HAP":
+#             y.append(0)
+#         elif label == "SAD":
+#             y.append(1)
+#         elif label == "ANG":
+#             y.append(2)
+#         # print(video_path, label)
+#     return X, y
 
 def train_model(model, criterion, optimizer, train_loader, device):
     model.train()
@@ -169,12 +337,12 @@ def test_model(model, criterion, test_loader, device):
 
 if __name__ == "__main__":
     # Check if input arguments are provided
-    if len(sys.argv) != 2:
-        print("Usage: python video_to_features_cnn.py input_folder")
-        sys.exit(1)
+    # if len(sys.argv) != 2:
+    #     print("Usage: python video_to_features_cnn.py input_folder")
+    #     sys.exit(1)
 
-    input_folder = sys.argv[1]
-    # input_folder = '/content/drive/MyDrive/csci535/videos'
+    # input_folder = sys.argv[1]
+    input_folder = '/content/drive/MyDrive/csci535/videos'
     # Check if input folder exists
     if not os.path.exists(input_folder):
         print("Input folder does not exist.")
@@ -210,7 +378,7 @@ if __name__ == "__main__":
 
 torch.save(model.state_dict(), 'ResNet18_video_'+str(num_epochs)+'_'+str(_bs)+'_'+str(_lr))
 
-# ! ls -lh /content/
+# !ls -lh /content/
 
-# !cp '/content/ResNet18_video_50_32_0.001' '/content/drive/MyDrive/csci535/models'
+# !cp  'ResNet18_video_70_32_0.001' '/content/drive/MyDrive/csci535/models'
 
