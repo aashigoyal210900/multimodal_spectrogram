@@ -48,6 +48,27 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/melspec_to_features_cnn.py)
         * Saved Model: [ResNet18_melspec_50_32_0.001](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
 
+* Experiment: Fine-tune ResNet18 on frames extracted out of videos from a subset of CREMA-D with one-second granularity
+    * Model: models.resnet18(weights='DEFAULT')
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model fine-tuned on: averaged one-second granular frames
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```32```
+    * lr: ```0.001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.6535``` 
+        * Train Accuracy: ```0.9058```
+        * Test Loss: ```1.0802```
+        * Test Accuracy: ```0.4390```
+    * Reproduce:
+        * Notebook: [```notebooks/videos_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/videos_to_features_cnn.ipynb)
+        * Script: [```scripts/videos_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/videos_to_features_cnn.py)
+        * Saved Model: [ResNet18_videos_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link)
+
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
 [GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
