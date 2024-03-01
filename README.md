@@ -154,6 +154,48 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-cross/melspec_to_features_video_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
+* Experiment: Check performance of pre-trained ResNet18 on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
+    * Model: models.resnet18(weights='DEFAULT')
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    <!-- * Model fine-tuned on: faces cropped out of middle frames and Mel spectrograms concatenated -->
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```32```
+    <!-- * lr: ```0.001``` -->
+    * Loss: ```nn.CrossEntropyLoss()```
+    <!-- * Train epochs: ```50``` -->
+    * Results:
+        <!-- * Train Loss: ```0.5515```  -->
+        <!-- * Train Accuracy: ```1.0000``` -->
+        * Test Loss: ```1.0839```
+        * Test Accuracy: ```0.3780```
+    * Reproduce:
+        * Notebook: [```notebooks/pretrained/audio_video_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/audio_video_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/audio_video_pretrained_cnn.py)
+        <!-- * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link) -->
+
+* Experiment: Fine-tune ResNet18 on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
+    * Model: models.resnet18(weights='DEFAULT')
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model fine-tuned on: faces cropped out of middle frames and Mel spectrograms concatenated
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```32```
+    * lr: ```0.001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.5515``` 
+        * Train Accuracy: ```1.0000```
+        * Test Loss: ```0.7124```
+        * Test Accuracy: ```0.8415```
+    * Reproduce:
+        * Notebook: [```notebooks/finetuned-combined/audio_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-combined/audio_video_cnn.ipynb)
+        * Script: [```scripts/finetuned-combined/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-combined/audio_video_cnn.py)
+        * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link)
+
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
 [GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
