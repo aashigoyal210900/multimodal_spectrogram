@@ -22,7 +22,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   ```$ python3 -m pip install torch torchvision pillow```
   > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
   
-* Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br>
+* Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using GoogLeNet (fine-tuned on Mel spectrograms) <br>
   ```$ python3 -m melspec_to_features_cnn.py input_folder```
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
 
