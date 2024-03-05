@@ -28,8 +28,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 #### Findings
 
-* Experiment: Check performance of pre-trained ResNet18 on Mel spectrograms generated from a subset of CREMA-Dspectrograms
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Check performance of pre-trained GoogLeNet on Mel spectrograms generated from a subset of CREMA-Dspectrograms
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
     * Total number of samples: ```273```
@@ -42,15 +42,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```0.5809```  -->
         <!-- * Train Accuracy: ```0.9686``` -->
-        * Test Loss: ```1.0953```
-        * Test Accuracy: ```0.3415```
+        * Test Loss: ```1.0993```
+        * Test Accuracy: ```0.2805```
     * Reproduce:
-        * Notebook: [```notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb)
-        * Script: [```scripts/pretrained/melspec_to_features_pretrained_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/melspec_to_features_pretrained_cnn.py)
+        * Notebook: [```notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/pretrained/melspec_to_features_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/melspec_to_features_pretrained_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/pretrained/melspec_to_features_pretrained_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
-* Experiment: Check performance of pre-trained ResNet18 on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Check performance of pre-trained GoogLeNet on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
     * Total number of samples: ```273```
@@ -63,15 +63,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```0.5809```  -->
         <!-- * Train Accuracy: ```0.9686``` -->
-        * Test Loss: ```1.0967```
-        * Test Accuracy: ```0.3659```
+        * Test Loss: ```1.0987```
+        * Test Accuracy: ```0.3171```
     * Reproduce:
-        * Notebook: [```notebooks/pretrained/video_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/video_to_features_pretrained_cnn.ipynb)
-        * Script: [```scripts/pretrained/video_to_features_pretrained_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/video_to_features_pretrained_cnn.py)
+        * Notebook: [```notebooks/pretrained/video_to_features_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/pretrained/video_to_features_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/video_to_features_pretrained_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/pretrained/video_to_features_pretrained_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
-* Experiment: Fine-tune ResNet18 on Mel spectrograms generated from a subset of CREMA-D
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Fine-tune GoogLeNet on Mel spectrograms generated from a subset of CREMA-D
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: Mel spectrograms
     * Total number of samples: ```273```
@@ -82,17 +82,17 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5624``` 
-        * Train Accuracy: ```0.9895```
-        * Test Loss: ```0.6576```
-        * Test Accuracy: ```0.8902```
+        * Train Loss: ```0.6148``` 
+        * Train Accuracy: ```0.9319```
+        * Test Loss: ```0.8268```
+        * Test Accuracy: ```0.6829```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-individual/melspec_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-individual/melspec_to_features_cnn.ipynb)
-        * Script: [```scripts/finetuned-individual/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-individual/melspec_to_features_cnn.py)
-        * Saved Model: [ResNet18_melspec_50_32_0.001](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link)
+        * Notebook: [```notebooks/finetuned-individual/melspec_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/finetuned-individual/melspec_to_features_cnn.ipynb)
+        * Script: [```scripts/finetuned-individual/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/finetuned-individual/melspec_to_features_cnn.py)
+        * Saved Model: [GoogLeNetModified_50_32_0.001](https://drive.google.com/file/d/13cUF4F3hF-nCyioMMB3efSX_-w45M8CD/view?usp=drive_link)
 
-* Experiment: Fine-tune ResNet18 on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Fine-tune GoogLeNet on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: faces cropped out of middle frames
     * Total number of samples: ```273```
@@ -103,17 +103,17 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5809``` 
-        * Train Accuracy: ```0.9686```
-        * Test Loss: ```0.7736```
-        * Test Accuracy: ```0.7805```
+        * Train Loss: ```0.6992``` 
+        * Train Accuracy: ```0.8429```
+        * Test Loss: ```0.9076```
+        * Test Accuracy: ```0.6463```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-individual/video_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-individual/video_to_features_cnn.ipynb)
-        * Script: [```scripts/finetuned-individual/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-individual/video_to_features_cnn.py)
-        * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link)
+        * Notebook: [```notebooks/finetuned-individual/video_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/finetuned-individual/video_to_features_cnn.ipynb)
+        * Script: [```scripts/finetuned-individual/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/finetuned-individual/video_to_features_cnn.py)
+        * Saved Model: [GoogLeNetModified__video_to_features_50_32_0.001](https://drive.google.com/file/d/1yd7h0MmezfpKsToyWk7cxY9a58DinaQo/view?usp=drive_link)
 
-* Experiment: Check cross performance of ResNet18 finetuned with Mel spectrograms on videos 
-    * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_melspec_50_32_0.001'))
+* Experiment: Check cross performance of GoogLeNet finetuned with Mel spectrograms on videos 
+    * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/GoogLeNetModified_50_32_0.001'))
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
     * Total number of samples: ```273```
@@ -126,15 +126,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```0.5809```  -->
         <!-- * Train Accuracy: ```0.9686``` -->
-        * Test Loss: ```1.2611```
-        * Test Accuracy: ```0.2561```
+        * Test Loss: ```1.1606```
+        * Test Accuracy: ```0.3902```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/video_to_features_audio_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-cross/video_to_features_audio_cnn.ipynb)
-        * Script: [```scripts/finetuned-cross/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-cross/video_to_features_audio_cnn.py)
+        * Notebook: [```notebooks/finetuned-cross/video_to_features_audio_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/finetuned-cross/video_to_features_audio_cnn.ipynb)
+        * Script: [```scripts/finetuned-cross/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/finetuned-cross/video_to_features_audio_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
-* Experiment: Check cross performance of ResNet18 finetuned with faces on Mel spectrograms
-    * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001'))
+* Experiment: Check cross performance of GoogLeNet finetuned with faces on Mel spectrograms
+    * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/GoogLeNetModified__video_to_features_50_32_0.001'))
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
     * Total number of samples: ```273```
@@ -147,15 +147,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```0.5809```  -->
         <!-- * Train Accuracy: ```0.9686``` -->
-        * Test Loss: ```1.2287```
-        * Test Accuracy: ```0.3171```
+        * Test Loss: ```1.2038```
+        * Test Accuracy: ```0.3293```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-cross/melspec_to_features_video_cnn.py)
+        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb)
+        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/finetuned-cross/melspec_to_features_video_cnn.py)
         <!-- * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
-* Experiment: Check performance of pre-trained ResNet18 on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Check performance of pre-trained GoogLeNet on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: faces cropped out of middle frames and Mel spectrograms concatenated -->
     * Total number of samples: ```273```
@@ -168,15 +168,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```0.5515```  -->
         <!-- * Train Accuracy: ```1.0000``` -->
-        * Test Loss: ```1.0839```
-        * Test Accuracy: ```0.3780```
+        * Test Loss: ```1.0987```
+        * Test Accuracy: ```0.3171```
     * Reproduce:
-        * Notebook: [```notebooks/pretrained/audio_video_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/pretrained/audio_video_pretrained_cnn.ipynb)
-        * Script: [```scripts/pretrained/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/pretrained/audio_video_pretrained_cnn.py)
+        * Notebook: [```notebooks/pretrained/audio_video_pretrained_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/pretrained/audio_video_pretrained_cnn.ipynb)
+        * Script: [```scripts/pretrained/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/pretrained/audio_video_pretrained_cnn.py)
         <!-- * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link) -->
 
-* Experiment: Fine-tune ResNet18 on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
-    * Model: models.resnet18(weights='DEFAULT')
+* Experiment: Fine-tune GoogLeNet on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
+    * Model: models.GoogLeNet
     * Number of classes: ```3``` (ANG, SAD, HAP)
     * Model fine-tuned on: faces cropped out of middle frames and Mel spectrograms concatenated
     * Total number of samples: ```273```
@@ -187,14 +187,14 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5515``` 
-        * Train Accuracy: ```1.0000```
-        * Test Loss: ```0.7124```
-        * Test Accuracy: ```0.8415```
+        * Train Loss: ```0.6793``` 
+        * Train Accuracy: ```0.8639```
+        * Test Loss: ```0.8967```
+        * Test Accuracy: ```0.6585```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-combined/audio_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/finetuned-combined/audio_video_cnn.ipynb)
-        * Script: [```scripts/finetuned-combined/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-combined/audio_video_cnn.py)
-        * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link)
+        * Notebook: [```notebooks/finetuned-combined/audio_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/notebooks/finetuned-combined/audio_video_cnn.ipynb)
+        * Script: [```scripts/finetuned-combined/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/riya/scripts/finetuned-combined/audio_video_cnn.py)
+        * Saved Model: [GoogLeNetModified_audio_video_50_32_0.001](https://drive.google.com/file/d/1wwcGEBr39BbhDBy8lfGb_JsZezHF4E6Z/view?usp=drive_link)
 
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
