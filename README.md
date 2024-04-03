@@ -196,6 +196,72 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/finetuned-combined/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-combined/audio_video_cnn.py)
         * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link)
 
+* Experiment: Train Vision Transformer on Mel spectrograms generated from a subset of CREMA-D
+    * Model: ViT
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model trained on: Mel spectrograms
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```1.0618``` 
+        * Train Accuracy: ```0.4293```
+        * Test Loss: ```1.1899```
+        * Test Accuracy: ```0.3293```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link)
+
+
+* Experiment: Train Vision Transformer on faces cropped out of middle frames extracted out of videos from a subset of CREMA-D
+    * Model: ViT
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model trained on: faces cropped out of middle frames
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.1950``` 
+        * Train Accuracy: ```0.9424```
+        * Test Loss: ```1.9058```
+        * Test Accuracy: ```0.6341```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Saved Model: [ViT_video_50_16_0.0001](https://drive.google.com/file/d/1-2whSQKAXO_jJ4ROaeq8U4JcF5CRAvWT/view?usp=drive_link)
+
+
+* Experiment: Train Vision Transformer on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, from a subset of CREMA-D
+    * Model: ViT
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    * Model trained on: faces cropped out of middle frames and Mel spectrograms concatenated
+    * Total number of samples: ```273```
+    * Number of train samples: ```191```
+    * Number of test samples: ```82```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.1222``` 
+        * Train Accuracy: ```0.9581```
+        * Test Loss: ```2.0300```
+        * Test Accuracy: ```0.6098```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Saved Model: [ViT_audio_video_50_16_0.0001](https://drive.google.com/file/d/1CCly-Bsybb2MaTlibX5SFXxhVak92jee/view?usp=drive_link)
+
+
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
 [GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
