@@ -262,6 +262,48 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Saved Model: [ViT_audio_video_50_16_0.0001](https://drive.google.com/file/d/1CCly-Bsybb2MaTlibX5SFXxhVak92jee/view?usp=drive_link)
 
 
+* Experiment: Check cross-performance of audio-trained Vision Transformer on faces
+    * Model: ViT
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    <!-- * Model trained on: Mel spectrograms -->
+    * Total number of samples: ```273```
+    <!-- * Number of train samples: ```191``` -->
+    * Number of test samples: ```82```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    <!-- * Train epochs: ```50``` -->
+    * Results:
+        <!-- * Train Loss: ```1.0618```  -->
+        <!-- * Train Accuracy: ```0.4293``` -->
+        * Test Loss: ```3.7878```
+        * Test Accuracy: ```0.3293```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
+
+* Experiment: Check cross-performance of video-trained Vision Transformer on Mel spectrograms
+    * Model: ViT
+    * Number of classes: ```3``` (ANG, SAD, HAP)
+    <!-- * Model trained on: Mel spectrograms -->
+    * Total number of samples: ```273```
+    <!-- * Number of train samples: ```191``` -->
+    * Number of test samples: ```82```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    <!-- * Train epochs: ```50``` -->
+    * Results:
+        <!-- * Train Loss: ```1.0618```  -->
+        <!-- * Train Accuracy: ```0.4293``` -->
+        * Test Loss: ```3.7308```
+        * Test Accuracy: ``0.3902```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
+
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
 [GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
