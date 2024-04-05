@@ -300,7 +300,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         <!-- * Train Loss: ```1.0618```  -->
         <!-- * Train Accuracy: ```0.4293``` -->
         * Test Loss: ```3.7308```
-        * Test Accuracy: ``0.3902```
+        * Test Accuracy: ```0.3902```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
         * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
