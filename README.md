@@ -375,7 +375,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Saved Model: [ViT_audio_video_fullscale_50_16_0.0001](https://drive.google.com/file/d/1xTV2Bbtp_pqlwVI_ik1W4-QJua-cn5lm/view?usp=drive_link)
 
 
-* Experiment: Check cross-performance of audio-trained Vision Transformer on fullscale Mel spectrograms
+* Experiment: Check cross-performance of audio-trained Vision Transformer on fullscale faces
     * Model: ViT
     * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
     <!-- * Model trained on: Mel spectrograms -->
@@ -396,7 +396,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
-* Experiment: Check cross-performance of video-trained Vision Transformer on fullscale faces
+* Experiment: Check cross-performance of video-trained Vision Transformer on fullscale Mel spectrograms
     * Model: ViT
     * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
     <!-- * Model trained on: Mel spectrograms -->
