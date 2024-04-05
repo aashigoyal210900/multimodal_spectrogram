@@ -216,7 +216,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3293```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link)
 
 
@@ -238,7 +238,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.6341```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_video_50_16_0.0001](https://drive.google.com/file/d/1-2whSQKAXO_jJ4ROaeq8U4JcF5CRAvWT/view?usp=drive_link)
 
 
@@ -260,7 +260,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.6098```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_audio_video_50_16_0.0001](https://drive.google.com/file/d/1CCly-Bsybb2MaTlibX5SFXxhVak92jee/view?usp=drive_link)
 
 
@@ -282,7 +282,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3293```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 * Experiment: Check cross-performance of video-trained Vision Transformer on Mel spectrograms
@@ -303,7 +303,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3902```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 * Experiment: Train Vision Transformer on Mel spectrograms generated on fullscale CREMA-D
@@ -325,7 +325,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.1738```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_fullscale.py)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
         * Saved Model: [ViT_audio_fullscale_50_16_0.0001](https://drive.google.com/file/d/1PqjDAIMp6-y8b_TKGX3vHAeQKp-f1Q9Y/view?usp=drive_link)
 
 
@@ -348,7 +348,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.5696```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_fullscale.py)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
         * Saved Model: [ViT_video_fullscale_50_16_0.0001]()
 
 
@@ -371,7 +371,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.5598```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_fullscale.py)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
         * Saved Model: [ViT_audio_video_fullscale_50_16_0.0001](https://drive.google.com/file/d/1xTV2Bbtp_pqlwVI_ik1W4-QJua-cn5lm/view?usp=drive_link)
 
 
@@ -393,7 +393,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```TBD```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_fullscale_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 * Experiment: Check cross-performance of video-trained Vision Transformer on fullscale faces
@@ -414,7 +414,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```TBD```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_fullscale_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 
