@@ -387,15 +387,15 @@ def train_ViT(_modality):
 def cross_test_ViT(_modality_model, _modality_features):
   _input_channels = 1
   model = ViT(img_dim=224,  # Image dimension
-                in_channels=_input_channels,  # Number of input channels
-                patch_dim=16,  # Patch dimension
-                num_classes=3,  #  # 3 classes for HAPPY, SAD, ANGRY
-                dim=768,  # Dimensionality of the token embeddings
-                blocks=6,  # Number of transformer blocks
-                heads=4,  # Number of attention heads
-                dim_linear_block=1024,  # Dimensionality of the linear block
-                dropout=0.4,  # Dropout rate
-                classification=True)  # Whether or not to include a classification token
+              in_channels=_input_channels,  # Number of input channels
+              patch_dim=16,  # Patch dimension
+              num_classes=6,  # 6 classes for HAPPY, SAD, ANGRY, DISGUST, FEAR, NEUTRAL
+              dim=768,  # Dimensionality of the token embeddings
+              blocks=6,  # Number of transformer blocks
+              heads=4,  # Number of attention heads
+              dim_linear_block=1024,  # Dimensionality of the linear block
+              dropout=0.4,  # Dropout rate
+              classification=True)  # Whether or not to include a classification token
 
   state_dict = torch.load('/content/drive/MyDrive/csci535/models/ViT_' + _modality_model + '_fullscale_50_16_0.0001')
   model.load_state_dict(state_dict)
@@ -406,7 +406,7 @@ def cross_test_ViT(_modality_model, _modality_features):
   criterion = nn.CrossEntropyLoss()
   optimizer = optim.Adam(model.parameters(), lr=_lr)
 
-  test_dataset = ConcatDataset(X_test, X_test_spec, y_test, modality = _modality_features)
+  test_dataset = ConcatDataset(X_test, X_test_spec, y_test, modality = _modality_features, fullscale = _fullscale)
 
   # Create data loaders
   _bs = 16

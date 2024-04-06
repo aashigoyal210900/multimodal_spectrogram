@@ -342,14 +342,14 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.6717``` 
-        * Train Accuracy: ```0.7531```
-        * Test Loss: ```1.3646```
-        * Test Accuracy: ```0.5696```
+        * Train Loss: ```0.6939``` 
+        * Train Accuracy: ```0.7414```
+        * Test Loss: ```1.4087```
+        * Test Accuracy: ```0.5795```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
         * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
-        * Saved Model: [ViT_video_fullscale_50_16_0.0001]()
+        * Saved Model: [ViT_video_fullscale_50_16_0.0001](https://drive.google.com/file/d/11kJw0ksKJPdgP2OgZrfQO9gDHHvUVcM5/view?usp=drive_link)
 
 
 * Experiment: Train Vision Transformer on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, on fullscale CREMA-D
@@ -389,8 +389,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```1.0618```  -->
         <!-- * Train Accuracy: ```0.4293``` -->
-        * Test Loss: ```TBD```
-        * Test Accuracy: ```TBD```
+        * Test Loss: ```1.7932```
+        * Test Accuracy: ```0.1738```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
         * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
@@ -410,8 +410,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Results:
         <!-- * Train Loss: ```1.0618```  -->
         <!-- * Train Accuracy: ```0.4293``` -->
-        * Test Loss: ```TBD```
-        * Test Accuracy: ```TBD```
+        * Test Loss: ```3.0131```
+        * Test Accuracy: ```0.1720```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
         * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
