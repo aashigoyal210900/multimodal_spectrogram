@@ -196,6 +196,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/finetuned-combined/audio_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-combined/audio_video_cnn.py)
         * Saved Model: [ResNet18_audio_video_50_32_0.001](https://drive.google.com/file/d/1kjqmT-UssMUMGVL8dcJymzE_iCCqKtQ2/view?usp=drive_link)
 
+---
+
 * Experiment: Train Vision Transformer on Mel spectrograms generated from a subset of CREMA-D
     * Model: ViT
     * Number of classes: ```3``` (ANG, SAD, HAP)
@@ -214,7 +216,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3293```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link)
 
 
@@ -236,7 +238,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.6341```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_video_50_16_0.0001](https://drive.google.com/file/d/1-2whSQKAXO_jJ4ROaeq8U4JcF5CRAvWT/view?usp=drive_link)
 
 
@@ -258,7 +260,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.6098```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT.py)
+        * Script: [```scripts/ViT/audio_video_ViT.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit.py)
         * Saved Model: [ViT_audio_video_50_16_0.0001](https://drive.google.com/file/d/1CCly-Bsybb2MaTlibX5SFXxhVak92jee/view?usp=drive_link)
 
 
@@ -280,7 +282,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.3293```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 * Experiment: Check cross-performance of video-trained Vision Transformer on Mel spectrograms
@@ -298,11 +300,123 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         <!-- * Train Loss: ```1.0618```  -->
         <!-- * Train Accuracy: ```0.4293``` -->
         * Test Loss: ```3.7308```
-        * Test Accuracy: ``0.3902```
+        * Test Accuracy: ```0.3902```
     * Reproduce:
         * Notebook: [```notebooks/ViT/audio_video_ViT_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_crossed.ipynb)
-        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_ViT_crossed.py)
+        * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
+
+* Experiment: Train Vision Transformer on Mel spectrograms generated on fullscale CREMA-D
+    * Model: ViT
+    * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
+    * Model trained on: Mel spectrograms
+    * Total number of samples: ```7442```
+    * Number of train samples: ```5231```
+    * Number of test samples: ```2242```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * dropout: ```0.4```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```1.7931``` 
+        * Train Accuracy: ```0.1634```
+        * Test Loss: ```1.7908```
+        * Test Accuracy: ```0.1738```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
+        * Saved Model: [ViT_audio_fullscale_50_16_0.0001](https://drive.google.com/file/d/1PqjDAIMp6-y8b_TKGX3vHAeQKp-f1Q9Y/view?usp=drive_link)
+
+
+* Experiment: Train Vision Transformer on faces cropped out of middle frames extracted out of videos on fullscale CREMA-D
+    * Model: ViT
+    * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
+    * Model trained on: faces cropped out of middle frames
+    * Total number of samples: ```7442```
+    * Number of train samples: ```5209```
+    * Number of test samples: ```2233```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * dropout: ```0.4```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.6939``` 
+        * Train Accuracy: ```0.7414```
+        * Test Loss: ```1.4087```
+        * Test Accuracy: ```0.5795```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
+        * Saved Model: [ViT_video_fullscale_50_16_0.0001](https://drive.google.com/file/d/11kJw0ksKJPdgP2OgZrfQO9gDHHvUVcM5/view?usp=drive_link)
+
+
+* Experiment: Train Vision Transformer on faces cropped from middle frames extracted out of videos and Mel spectrograms concatenated, on fullscale CREMA-D
+    * Model: ViT
+    * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
+    * Model trained on: faces cropped out of middle frames and Mel spectrograms concatenated
+    * Total number of samples: ```7442```
+    * Number of train samples: ```5231```
+    * Number of test samples: ```2242```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * dropout: ```0.4```
+    * Loss: ```nn.CrossEntropyLoss()```
+    * Train epochs: ```50```
+    * Results:
+        * Train Loss: ```0.8365``` 
+        * Train Accuracy: ```0.6811```
+        * Test Loss: ```1.3221```
+        * Test Accuracy: ```0.5598```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale.py)
+        * Saved Model: [ViT_audio_video_fullscale_50_16_0.0001](https://drive.google.com/file/d/1xTV2Bbtp_pqlwVI_ik1W4-QJua-cn5lm/view?usp=drive_link)
+
+
+* Experiment: Check cross-performance of audio-trained Vision Transformer on fullscale faces
+    * Model: ViT
+    * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
+    <!-- * Model trained on: Mel spectrograms -->
+    * Total number of samples: ```7442```
+    <!-- * Number of train samples: ```191``` -->
+    * Number of test samples: ```2242```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    <!-- * Train epochs: ```50``` -->
+    * Results:
+        <!-- * Train Loss: ```1.0618```  -->
+        <!-- * Train Accuracy: ```0.4293``` -->
+        * Test Loss: ```1.7932```
+        * Test Accuracy: ```0.1738```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
+        <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
+
+* Experiment: Check cross-performance of video-trained Vision Transformer on fullscale Mel spectrograms
+    * Model: ViT
+    * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
+    <!-- * Model trained on: Mel spectrograms -->
+    * Total number of samples: ```7442```
+    <!-- * Number of train samples: ```191``` -->
+    * Number of test samples: ```2233```
+    * Batch size: ```16```
+    * lr: ```0.0001```
+    * Loss: ```nn.CrossEntropyLoss()```
+    <!-- * Train epochs: ```50``` -->
+    * Results:
+        <!-- * Train Loss: ```1.0618```  -->
+        <!-- * Train Accuracy: ```0.4293``` -->
+        * Test Loss: ```3.0131```
+        * Test Accuracy: ```0.1720```
+    * Reproduce:
+        * Notebook: [```notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/notebooks/ViT/audio_video_ViT_fullscale_crossed.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_fullscale_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_fullscale_crossed.py)
+        <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
+
 
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
