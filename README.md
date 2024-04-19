@@ -311,8 +311,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
     * Model trained on: Mel spectrograms
     * Total number of samples: ```7442```
-    * Number of train samples: ```5231```
-    * Number of test samples: ```2242```
+    * Number of train samples: ```5209```
+    * Number of test samples: ```2233```
     * Batch size: ```16```
     * lr: ```0.0001```
     * dropout: ```0.4```
@@ -357,8 +357,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
     * Model trained on: faces cropped out of middle frames and Mel spectrograms concatenated
     * Total number of samples: ```7442```
-    * Number of train samples: ```5231```
-    * Number of test samples: ```2242```
+    * Number of train samples: ```5209```
+    * Number of test samples: ```2233```
     * Batch size: ```16```
     * lr: ```0.0001```
     * dropout: ```0.4```
@@ -381,7 +381,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     <!-- * Model trained on: Mel spectrograms -->
     * Total number of samples: ```7442```
     <!-- * Number of train samples: ```191``` -->
-    * Number of test samples: ```2242```
+    * Number of test samples: ```2233```
     * Batch size: ```16```
     * lr: ```0.0001```
     * Loss: ```nn.CrossEntropyLoss()```
