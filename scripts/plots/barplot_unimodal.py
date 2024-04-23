@@ -18,25 +18,25 @@ encoders = [
 # Audio
 data_audio = {
     'ResNet18': [0.8216, 0.5825],
-    'GoogLeNet': [0, 0],# Placeholder values
+    'GoogLeNet': [0.907, 0.619],
     'VGG16': [0.6366, 0.5120],
     'Simple3DCNN': [0.519, 0.514],
     'I3D': [0.623, 0.605],
     'Ablated I3D' : [0, 0.448],
     'ViT': [0.1634, 0.1738],
-    'VideoMAE': [0, 0]  # Placeholder values
+    'VideoMAE': [0.344 , 0.372]
 }
 
 # Vision
 data_vision = {
     'ResNet18': [0.8634, 0.6225],
-    'GoogLeNet': [0, 0],# Placeholder values
+    'GoogLeNet': [0.866, 0.566],
     'VGG16': [0.9495, 0.7040],
     'Simple3DCNN': [0.546, 0.462],
     'I3D': [0.878, 0.831],
     'Ablated I3D' : [0, 0.540],
     'ViT': [0.8361, 0.5934],
-    'VideoMAE': [0, 0]  # Placeholder values
+    'VideoMAE': [0.170, 0.188]
 }
 
 if sys.argv[1] == 'audio':

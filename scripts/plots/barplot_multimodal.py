@@ -42,13 +42,13 @@ encoders = [
 # Multimodal
 data = {
     'ResNet18': [0.8854, 0.6350],
-    'GoogLeNet': [0, 0],# Placeholder values
+    'GoogLeNet': [0.925, 0.661],
     'VGG16': [0.4329, 0.4716],
     'Simple3DCNN': [0.647, 0.573],
     'I3D': [0.923, 0.806],
     # 'Ablated I3D' : [0, 0.540],
     'ViT': [0.6811, 0.5598],
-    'VideoMAE': [0, 0]  # Placeholder values
+    'VideoMAE': [0.334, 0.366]
 }
 
 # colors = ['#FF9999', '#99CCFF', '#99FF99', '#FFCC99', '#FF99CC', '#CCFF99', '#99FFFF']  # Colors for each encoder
