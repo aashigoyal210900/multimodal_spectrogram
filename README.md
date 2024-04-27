@@ -28,15 +28,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 #### For 3D experiments
 
-  Start with creating mel spectrograms by running:
+* Start with creating mel spectrograms by running:
 
   ```python3 wav_to_melspec_3d.py input_folder output_folder```
 
-  Then create 3D Data:
+* Then create 3D Data:
 
   ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
   
-  Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```:
+* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```:
 
   ```python3 simple3d_train_test.py modality 3d_data_folder```
 
@@ -44,7 +44,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
   ```python3 videoMAE_train_test.py modality 3d_data_folder```
 
-  For ablated tests:
+* For ablated tests:
 
   ```python3 simple3d_ablated_test.py modality 3d_data_folder```
 
