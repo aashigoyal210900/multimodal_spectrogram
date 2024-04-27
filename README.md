@@ -14,17 +14,41 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 * Install ```librosa```<br>
   ```$ python3 -m pip install librosa```
-  
+
 * Run ```wav_to_melspec.py``` to convert WAV audio files to Mel spectrograms<br>
   ```$ python3 wav_to_melspec.py input_folder output_folder```
 
 * Install ```torch```, ```torchvision```, ```pillow```<br>
   ```$ python3 -m pip install torch torchvision pillow```
   > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
-  
+
 * Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br>
   ```$ python3 -m melspec_to_features_cnn.py input_folder```
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
+
+  #### For 3D experiments
+
+  Start with creating mel spectrograms by running:
+
+  ```python3 wav_to_melspec_3d.py input_folder output_folder```
+
+  Then create 3D Data:
+
+  ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
+  
+  Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```:
+
+  ```python3 simple3d_train_test.py modality 3d_data_folder```
+
+  ```python3 i3d_train_test.py modality 3d_data_folder```
+
+  ```python3 videoMAE_train_test.py modality 3d_data_folder```
+
+  For ablated tests:
+
+  ```python3 simple3d_ablated_test.py modality 3d_data_folder```
+
+  ```python3 i3d_ablated_test.py modality 3d_data_folder```
 
 #### Findings
 
@@ -82,7 +106,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5624``` 
+        * Train Loss: ```0.5624```
         * Train Accuracy: ```0.9895```
         * Test Loss: ```0.6576```
         * Test Accuracy: ```0.8902```
@@ -103,7 +127,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5809``` 
+        * Train Loss: ```0.5809```
         * Train Accuracy: ```0.9686```
         * Test Loss: ```0.7736```
         * Test Accuracy: ```0.7805```
@@ -112,7 +136,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/finetuned-individual/video_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/finetuned-individual/video_to_features_cnn.py)
         * Saved Model: [ResNet18_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link)
 
-* Experiment: Check cross performance of ResNet18 finetuned with Mel spectrograms on videos 
+* Experiment: Check cross performance of ResNet18 finetuned with Mel spectrograms on videos
     * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_melspec_50_32_0.001'))
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
@@ -187,7 +211,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.5515``` 
+        * Train Loss: ```0.5515```
         * Train Accuracy: ```1.0000```
         * Test Loss: ```0.7124```
         * Test Accuracy: ```0.8415```
@@ -210,7 +234,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```1.0618``` 
+        * Train Loss: ```1.0618```
         * Train Accuracy: ```0.4293```
         * Test Loss: ```1.1899```
         * Test Accuracy: ```0.3293```
@@ -232,7 +256,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.1950``` 
+        * Train Loss: ```0.1950```
         * Train Accuracy: ```0.9424```
         * Test Loss: ```1.9058```
         * Test Accuracy: ```0.6341```
@@ -254,7 +278,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.1222``` 
+        * Train Loss: ```0.1222```
         * Train Accuracy: ```0.9581```
         * Test Loss: ```2.0300```
         * Test Accuracy: ```0.6098```
@@ -319,7 +343,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```1.7931``` 
+        * Train Loss: ```1.7931```
         * Train Accuracy: ```0.1634```
         * Test Loss: ```1.7908```
         * Test Accuracy: ```0.1738```
@@ -342,7 +366,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.6939``` 
+        * Train Loss: ```0.6939```
         * Train Accuracy: ```0.7414```
         * Test Loss: ```1.4087```
         * Test Accuracy: ```0.5795```
@@ -365,7 +389,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
     * Loss: ```nn.CrossEntropyLoss()```
     * Train epochs: ```50```
     * Results:
-        * Train Loss: ```0.8365``` 
+        * Train Loss: ```0.8365```
         * Train Accuracy: ```0.6811```
         * Test Loss: ```1.3221```
         * Test Accuracy: ```0.5598```
