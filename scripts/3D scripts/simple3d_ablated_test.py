@@ -28,10 +28,12 @@ if __name__ == "__main__":
     print("Creating model...")
 
     model = Simple3DCNN(num_classes=6, modality="multi")
+
     try:
         model.load_state_dict(torch.load(sys.argv[3])["model_state_dict"])
     except:
-        continue
+        print("Missing or invalid checkpoint. Using untrained Simple3D model...")
+
     model = model.to(device)
 
     loss_fn = nn.CrossEntropyLoss()

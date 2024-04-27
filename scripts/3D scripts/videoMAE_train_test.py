@@ -60,7 +60,7 @@ class MultimodalDataset(Dataset):
         new_audio = []
 
         # Sample num_frames evenly across the video
-        indices = np.linspace(0, X.shape[1] - 1, self.num_frames, dtype=int)
+        indices = np.linspace(0, video.shape[1] - 1, self.num_frames, dtype=int)
 
         # Further resize frames and spectrogram chunks
         for i in indices:
@@ -139,6 +139,7 @@ def train(model,
           loss_fn,
           optimizer,
           data_folder,
+          output_folder,
           modality,
           max_length,
           device,
@@ -209,7 +210,7 @@ def train(model,
             "model_state_dict": model.state_dict(),
             "optimizer_state_dict": optimizer.state_dict(),
             "results": results
-        }, f"./../../models/{model_name}_{epoch+length}.pt")
+        }, f"{output_folder}/{model_name}_{epoch+length}.pt")
 
     return (results)
 
@@ -243,6 +244,7 @@ if __name__ == "__main__":
                 loss_fn=loss_fn,
                 optimizer=optimizer,
                 data_folder=sys.argv[2],
+                output_folder=sys.argv[3],
                 modality=modality,
                 max_length=MAX_LENGTH,
                 device=device,

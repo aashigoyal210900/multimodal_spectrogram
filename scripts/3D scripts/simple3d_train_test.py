@@ -108,6 +108,7 @@ def train(model,
           loss_fn,
           optimizer,
           data_folder,
+          output_folder,
           MAX_LENGTH,
           modality,
           device,
@@ -177,7 +178,7 @@ def train(model,
             "model_state_dict": model.state_dict(),
             "optimizer_state_dict": optimizer.state_dict(),
             "results": results
-        }, f"./../../models/{model_name}_{epoch+length}.pt")
+        }, f"{output_folder}/{model_name}_{epoch+length}.pt")
 
     return (results)
 
@@ -187,11 +188,10 @@ if __name__ == "__main__":
     torch.manual_seed(10)
     torch.cuda.manual_seed(10)
 
-    # Define number of EPOCHS, MAX_LENGTH of videos, modality to train, and path to data folder
+    # Define number of EPOCHS, MAX_LENGTH of videos, modality to train
     EPOCHS = 50
     MAX_LENGTH = 135
     modality = sys.argv[1]
-    data_folder = sys.argv[2]
 
     print("Creating model...")
 
@@ -207,7 +207,8 @@ if __name__ == "__main__":
                 epochs=EPOCHS,
                 loss_fn=loss_fn,
                 optimizer=optimizer,
-                data_folder=data_folder,
+                data_folder=sys.argv[2],
+                output_folder=sys.argv[3],
                 MAX_LENGTH=MAX_LENGTH,
                 modality=modality,
                 device=device,

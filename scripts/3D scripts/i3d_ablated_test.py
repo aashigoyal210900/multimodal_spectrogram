@@ -34,8 +34,8 @@ if __name__ == "__main__":
     try:
         model.load_state_dict(torch.load(sys.argv[3])["model_state_dict"])
     except:
-        continue
-        
+        print("Missing or invalid checkpoint. Using untrained I3D model...")
+
     model = model.to(device)
 
     loss_fn = nn.CrossEntropyLoss()
