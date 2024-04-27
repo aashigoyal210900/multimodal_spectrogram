@@ -30,7 +30,12 @@ if __name__ == "__main__":
 
     model = InceptionI3d(num_classes=400, spatial_squeeze=False)
     model.replace_logits(num_classes=6)
-    model.load_state_dict(torch.load("./../../models/i3d_multi_24.pt")["model_state_dict"])
+
+    try:
+        model.load_state_dict(torch.load(sys.argv[3])["model_state_dict"])
+    except:
+        continue
+        
     model = model.to(device)
 
     loss_fn = nn.CrossEntropyLoss()

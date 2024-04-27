@@ -28,7 +28,10 @@ if __name__ == "__main__":
     print("Creating model...")
 
     model = Simple3DCNN(num_classes=6, modality="multi")
-    model.load_state_dict(torch.load("./../../models/simple3d_multimodal_35.pt")["model_state_dict"])
+    try:
+        model.load_state_dict(torch.load(sys.argv[3])["model_state_dict"])
+    except:
+        continue
     model = model.to(device)
 
     loss_fn = nn.CrossEntropyLoss()
