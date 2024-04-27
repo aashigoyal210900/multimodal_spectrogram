@@ -35,24 +35,24 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 * Then create 3D Data:
 
   ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
-  
+
 * Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```:
 
-  ```python3 simple3d_train_test.py modality 3d_data_folder```
+  ```python3 simple3d_train_test.py modality 3d_data_path```
 
-  ```python3 i3d_train_test.py modality 3d_data_folder```
+  ```python3 i3d_train_test.py modality 3d_data_path```
 
-  ```python3 videoMAE_train_test.py modality 3d_data_folder```
+  ```python3 videoMAE_train_test.py modality 3d_data_path```
 
-* For ablated tests:
+* For ablated tests. Checkpoint_path is optional but recommended, otherwise an untrained model is used:
 
-  ```python3 simple3d_ablated_test.py modality 3d_data_folder```
+  ```python3 simple3d_ablated_test.py modality 3d_data_path checkpoint_path```
 
-  ```python3 i3d_ablated_test.py modality 3d_data_folder```
+  ```python3 i3d_ablated_test.py modality 3d_data_path checkpoint_path```
 
 #### Findings
 
-* Experiment: Check performance of pre-trained ResNet18 on Mel spectrograms generated from a subset of CREMA-Dspectrograms
+* Experiment: Check performance of pre-trained ResNet18 on Mel spectrograms generated from a subset of CREMA-D spectrograms
     * Model: models.resnet18(weights='DEFAULT')
     * Number of classes: ```3``` (ANG, SAD, HAP)
     <!-- * Model fine-tuned on: averaged one-second granular frames -->
