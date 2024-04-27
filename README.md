@@ -18,8 +18,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 * Run ```wav_to_melspec.py``` to convert WAV audio files to Mel spectrograms<br>
   ```$ python3 wav_to_melspec.py input_folder output_folder```
 
-* Install ```torch```, ```torchvision```, ```pillow```, ```numpy```, ```scikit-learn```, ```opencv-python```, ```transformers```<br>
-  ```$ python3 -m pip install torch torchvision pillow```
+* Install ```torch```, ```torchvision```, ```pillow```, ```numpy```, ```scikit-learn```, ```opencv```, ```transformers```<br>
+  ```$ python3 -m pip install torch torchvision pillow numpy scikit-learn opencv-python transformers```
   > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
 
 * Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br>
