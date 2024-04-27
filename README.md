@@ -26,7 +26,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   ```$ python3 -m melspec_to_features_cnn.py input_folder```
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
 
-  #### For 3D experiments
+#### For 3D experiments
 
   Start with creating mel spectrograms by running:
 
