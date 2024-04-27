@@ -73,6 +73,7 @@ def train(model,
           loss_fn,
           optimizer,
           data_folder,
+          output_folder,
           max_length,
           modality,
           device,
@@ -143,7 +144,7 @@ def train(model,
             "model_state_dict": model.state_dict(),
             "optimizer_state_dict": optimizer.state_dict(),
             "results": results
-        }, f"./../../models/{model_name}_{epoch+length}.pt")
+        }, f"{output_folder}/{model_name}_{epoch+length}.pt")
 
     return (results)
 
@@ -157,10 +158,16 @@ if __name__ == "__main__":
     MAX_LENGTH = 135
     modality = sys.argv[1]
 
+
     print("Creating model...")
 
     model = InceptionI3d(num_classes=400, spatial_squeeze=False)
-    model.load_state_dict(torch.load("./../../models/rgb_imagenet.pt"))
+
+    try:
+        model.load_state_dict(torch.load(sys.argv[4]))
+    except:
+        print("Missing or invalid pretraining checkpoint. Using untrained I3D")
+
     model.replace_logits(num_classes=6)
     model = model.to(device)
 
@@ -175,6 +182,7 @@ if __name__ == "__main__":
                 loss_fn=loss_fn,
                 optimizer=optimizer,
                 data_folder=sys.argv[2],
+                output_folder=sys.argv[3],
                 max_length=MAX_LENGTH,
                 modality=modality,
                 device=device,

@@ -18,7 +18,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 * Run ```wav_to_melspec.py``` to convert WAV audio files to Mel spectrograms<br>
   ```$ python3 wav_to_melspec.py input_folder output_folder```
 
-* Install ```torch```, ```torchvision```, ```pillow```<br>
+* Install ```torch```, ```torchvision```, ```pillow```, ```numpy```, ```scikit-learn```, ```opencv-python```, ```transformers```<br>
   ```$ python3 -m pip install torch torchvision pillow```
   > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
 
@@ -36,15 +36,15 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
   ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
 
-* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```:
+* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```. ```pretrain_checkpoint``` is optional. ImageNet pretrained model is provided in the ```models``` folder named ```rgb_imagenet.pt```. If ```pretrain_checkpoint``` is missing, the untrained I3D model will be used:
 
-  ```python3 simple3d_train_test.py modality 3d_data_path```
+  ```python3 simple3d_train_test.py modality 3d_data_path output_path```
 
-  ```python3 i3d_train_test.py modality 3d_data_path```
+  ```python3 i3d_train_test.py modality 3d_data_path output_path pretrain_checkpoint```
 
-  ```python3 videoMAE_train_test.py modality 3d_data_path```
+  ```python3 videoMAE_train_test.py modality 3d_data_path output_path```
 
-* For ablated tests. Checkpoint_path is optional but recommended, otherwise an untrained model is used:
+* For ablated tests. ```Checkpoint_path``` is optional but recommended, otherwise an untrained model is used:
 
   ```python3 simple3d_ablated_test.py modality 3d_data_path checkpoint_path```
 
