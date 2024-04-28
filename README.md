@@ -87,8 +87,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```1.5259```
         * Test Accuracy: ```0.5120```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-individual/melspec_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/finetuned-individual/melspec_to_features_cnn.ipynb)
-        * Script: [```scripts/finetuned-individual/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/finetuned-individual/melspec_to_features_cnn.py)
+        * Notebook: [```notebooks/finetuned-individual/melspec_to_features_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/finetuned-individual/melspec_to_features_cnn (2).ipynb)
+        * Script: [```scripts/finetuned-individual/melspec_to_features_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/finetuned-individual/melspec_to_features_cnn (2).py)
     <!-- * Saved Model: [VGG16_melspec_50_32_0.001](https://drive.google.com/file/d/1HXjd7Ej0L4NJLfzxH0L8taDTXRGoGBML/view?usp=drive_link) -->
 
 * Experiment: Fine-tune Vgg16 on faces cropped out of middle frames extracted out of videos from a fullscale of CREMA-D
