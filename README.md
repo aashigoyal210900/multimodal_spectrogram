@@ -18,25 +18,25 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 * Start with creating mel spectrograms by running:
 
-  ```python3 wav_to_melspec_3d.py input_folder output_folder```
+  ```python3 wav_to_melspec_3d.py /path/to/input_folder /path/to/output_folder```
 
 * Then create 3D Data:
 
-  ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
+  ```python3 create_3d_data.py /path/to/video_folder /path/to/spectrogram_folder /path/to/output_folder```
 
-* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```. ```pretrain_checkpoint``` is optional. The ImageNet pretrained model used here is provided in the ```models``` folder at [pytorch-i3d](https://github.com/piergiaj/pytorch-i3d) named ```rgb_imagenet.pt```. If ```pretrain_checkpoint``` is missing, the untrained I3D model will be used:
+* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```. ```/path/to/pretrain_checkpoint``` is optional. The ImageNet pretrained model used here is provided in the ```models``` folder at [pytorch-i3d](https://github.com/piergiaj/pytorch-i3d) named ```rgb_imagenet.pt```. If ```/path/to/pretrain_checkpoint``` is missing, the untrained I3D model will be used:
 
-  ```python3 simple3d_train_test.py modality 3d_data_path output_path```
+  ```python3 simple3d_train_test.py modality /path/to/3d_data /path/to/output_folder```
 
-  ```python3 i3d_train_test.py modality 3d_data_path output_path pretrain_checkpoint```
+  ```python3 i3d_train_test.py modality /path/to/3d_data /path/to/output /path/to/pretrain_checkpoint```
 
-  ```python3 videoMAE_train_test.py modality 3d_data_path output_path```
+  ```python3 videoMAE_train_test.py modality /path/to/3d_data /path/to/output_folder```
 
-* For ablated tests. ```Checkpoint_path``` is optional but recommended, otherwise an untrained model is used:
+* For ablated tests. ```/path/to/checkpoint``` is optional but recommended, otherwise an untrained model is used:
 
-  ```python3 simple3d_ablated_test.py modality 3d_data_path checkpoint_path```
+  ```python3 simple3d_ablated_test.py modality /path/to/3d_data /path/to/checkpoint```
 
-  ```python3 i3d_ablated_test.py modality 3d_data_path checkpoint_path```
+  ```python3 i3d_ablated_test.py modality /path/to/3d_data /path/to/checkpoint```
 
 
 > **_NOTE:_**  We have retained notebooks/scripts/models for the pre-midterm (subset experiments) as well, in this repository.
