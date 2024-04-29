@@ -1,29 +1,39 @@
-# A multimodal architecture with shared encoder that uses spectrograms for audio
+# A comparison of shared encoders for multimodal emotion recognition
 ## Course Project, CSCI 535, Spring 2024
 Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
-#### Usage
-> :warning: To be continuously modified as we make progress!
-* Install ```ffmpeg```<br>
-  ```$ brew install ffmpeg``` (macOS)<br>
-  ```$ sudo apt-get install ffmpeg``` (Linux)<br>
-  ```$ python3 -m pip install ffmpeg``` (conda)
+#### For 2D experiments
+<!-- > :warning: To be continuously modified as we make progress! -->
+
+<!-- * Install ```ffmpeg```<br> -->
+  <!-- ```$ brew install ffmpeg``` (macOS)<br> -->
+  <!-- ```$ sudo apt-get install ffmpeg``` (Linux)<br> -->
+  <!-- ```$ python3 -m pip install ffmpeg``` (conda) -->
 
 * Run ```flv_to_wav.py``` to convert FLV video files of CREMA-D to WAV audio files<br>
   ```$ python3 flv_to_wav.py input_folder output_folder```
 
-* Install ```librosa```<br>
-  ```$ python3 -m pip install librosa```
+<!-- * Install ```librosa```<br> -->
+  <!-- ```$ python3 -m pip install librosa``` -->
 
 * Run ```wav_to_melspec.py``` to convert WAV audio files to Mel spectrograms<br>
   ```$ python3 wav_to_melspec.py input_folder output_folder```
 
-* Install ```torch```, ```torchvision```, ```pillow```, ```numpy```, ```scikit-learn```, ```opencv```, ```transformers```<br>
-  ```$ python3 -m pip install torch torchvision pillow numpy scikit-learn opencv-python transformers```
-  > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt```
+<!-- * Install ```torch```, ```torchvision```, ```pillow```, ```numpy```, ```scikit-learn```, ```opencv```, ```transformers```<br> -->
+  <!-- ```$ python3 -m pip install torch torchvision pillow numpy scikit-learn opencv-python transformers``` -->
+  <!-- > TODO: Bundle all requirements for the pipeline into a single ```requirements.txt``` -->
 
-* Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br>
-  ```$ python3 -m melspec_to_features_cnn.py input_folder```
+<!-- * Run ```melspec_to_features_cnn.py``` to extract features out of Mel spectrograms using ResNet-18 (fine-tuned on Mel spectrograms) <br> -->
+  <!-- ```$ python3 -m melspec_to_features_cnn.py input_folder``` -->
+
+  * Run ```audio_video_vit_fullscale.py``` to train ViT on audio, vision, and multimodal data. We have pre-processed and stored the data as ```.npy``` files, so it sufficies to provide their paths instead.
+
+  ```python3 audio_video_vit.py path/to/X.npy path/to/y.npy path/to/X_spec.npy, path/to/y_spec.npy```
+
+  * TODO: Add similar one-liners for 2DCNNs (ResNet18, VGG16, GoogLeNet).
+
+
+
   <!-- > TODO: Explore the features extracted using pre-trained ResNet-18, think about training ResNet-18 on the Mel spectrograms / corresponding video files / both -->
 
 #### For 3D experiments
@@ -51,6 +61,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   ```python3 i3d_ablated_test.py modality 3d_data_path checkpoint_path```
 
 #### Findings
+
+##### 2D Experiments (subset -- pre-midterm)
 
 * Experiment: Check performance of pre-trained ResNet18 on Mel spectrograms generated from a subset of CREMA-D spectrograms
     * Model: models.resnet18(weights='DEFAULT')
@@ -330,6 +342,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Script: [```scripts/ViT/audio_video_ViT_crossed.py```](https://github.com/ksanu1998/multimodal_course_project/blob/anuroop/scripts/ViT/audio_video_vit_crossed.py)
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
+
+##### 2D Experiments (fullscale -- post-midterm)
+
 * Experiment: Train Vision Transformer on Mel spectrograms generated on fullscale CREMA-D
     * Model: ViT
     * Number of classes: ```6``` (ANG, SAD, HAP, DIS, FEA, NEU)
@@ -442,7 +457,10 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         <!-- * Saved Model: [ViT_audio_50_16_0.0001](https://drive.google.com/file/d/1-2JteyPMQvxtQk2YU1i99lMoIEAum07q/view?usp=drive_link) -->
 
 
+* TODO: Add similar descriptions for 2DCNNs (ResNet18, VGG16, GoogLeNet).
+
 #### Resources
 <!-- Audio feature extraction via spectrograms - https://github.com/DeepSpectrum/DeepSpectrum <br> -->
-[GDrive](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
-[GDoc](https://docs.google.com/document/d/1jN6ZpCUjqboJQLSFR-Osqlm5kRHGYX2a47GRADVYUPU/edit?usp=sharing)
+[GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
+[GDrive2](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=drive_link) <br>
+<!-- [GDoc](https://docs.google.com/document/d/1jN6ZpCUjqboJQLSFR-Osqlm5kRHGYX2a47GRADVYUPU/edit?usp=sharing) -->
