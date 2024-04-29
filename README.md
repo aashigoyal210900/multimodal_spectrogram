@@ -7,10 +7,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 * Generate Mel spectrograms from WAV audio files by running ```wav_to_melspec.py```<br>
   ```python3 wav_to_melspec.py /path/to/WAVFiles /path/to/output```
 
-The following describes running 2D experiments -- `ResNet18`, `VGG16`, `GoogLeNet`, and `ViT`, on audio, vision, and multimodal data. 
-
-
-* Run ```audio_video_vit_fullscale.py``` to train ViT on audio, vision, and multimodal data. Pre-processed data (faces and spectrograms) is stored as ```.npy``` files [here](https://drive.google.com/drive/folders/1RbFeXB-B6r3BBEEsGDGudHrLR6Selkfq?usp=drive_link).
+* Run ```audio_video_vit_fullscale.py``` to train `ViT` on audio, vision, and multimodal data. Pre-processed data (faces and spectrograms) is stored as ```.npy``` files [here](https://drive.google.com/drive/folders/1RbFeXB-B6r3BBEEsGDGudHrLR6Selkfq?usp=drive_link).
 
   ```python3 audio_video_vit_fullscale.py path/to/X.npy path/to/y.npy path/to/X_spec.npy, path/to/y_spec.npy```
 
