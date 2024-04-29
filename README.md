@@ -225,9 +225,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```1.1294```
         * Test Accuracy: ```0.2683```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_1.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_1.py)
-        <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
+        * Notebook: [```notebooks/ViT/audio_video_ViT_1.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_1.ipynb)
+        * Script: [```scripts/ViT/audio_video_ViT_1.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_1.py)
 
 * Experiment: Check performance of ViT audio individual, vision individual and multimodal on a subset of CREMA D dataset
     <!-- * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001')) -->
@@ -257,9 +256,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```2.5427```
         * Test Accuracy: ```0.6220```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_2.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_2.py)
-        <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_2.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_2.py)
+ 
 
 * Experiment: Check cross performance of ViT audio individual, vision individual and multimodal on a subset of CREMA D dataset
     <!-- * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001')) -->
@@ -281,9 +280,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.2683```
   
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_crossed_1.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_crossed_1.py)
-        <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_crossed_1.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_crossed_1.py)
+
 
 * Experiment: Check cross performance of ViT audio individual, vision individual and multimodal on a subset of CREMA D dataset
     <!-- * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001')) -->
@@ -305,9 +304,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.6098```
   
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_crossed_2.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_crossed_2.py)
-        <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_crossed_2.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_crossed_2.py)
+
 
 * Experiment: Check performance of ViT audio individual, vision individual and multimodal on a fullscale of CREMA D dataset
     <!-- * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001')) -->
@@ -337,9 +336,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```1.7954```
         * Test Accuracy: ```0.1764```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_1.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_1.py)
-        <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_1.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_1.py)
+
 
 * Experiment: Check performance of ViT audio individual, vision individual and multimodal on a fullscale of CREMA D dataset
     <!-- * Model: model.load_state_dict(torch.load('/content/drive/MyDrive/csci535/models/ResNet18_video_50_32_0.001')) -->
@@ -369,8 +368,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Loss: ```1.4108```
         * Test Accuracy: ```0.5083```
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_2.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_2.py)
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_2.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_2.py)
         <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 * Experiment: Check cross performance of ViT audio individual, vision individual and multimodal on a FULLSCALE of CREMA D dataset
@@ -393,8 +392,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.1711```
   
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_crossed_1.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_crossed_1.py)
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_crossed_1.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_crossed_1.py)
         <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 * Experiment: Check cross performance of ViT audio individual, vision individual and multimodal on a FULLSCALE of CREMA D dataset
@@ -417,8 +416,8 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
         * Test Accuracy: ```0.1724```
   
     * Reproduce:
-        * Notebook: [```notebooks/finetuned-cross/melspec_to_features_video_cnn.ipynb```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_crossed_2.ipynb)
-        * Script: [```scripts/finetuned-cross/melspec_to_features_video_cnn.py```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_crossed_2.py)
+        * Notebook: [```notebooks/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/notebooks/Vit/audio_video_ViT_fullscale_crossed_2.ipynb)
+        * Script: [```scripts/ViT```](https://github.com/ksanu1998/multimodal_course_project/blob/aashi/scripts/Vit/audio_video_ViT_fullscale_crossed_2.py)
         <!-- * Saved Model: [vgg16_video_50_32_0.001](https://drive.google.com/file/d/1aZ4IMVIlKW8Qq-EvaVwd-7YKSm8obUXa/view?usp=drive_link) -->
 
 
