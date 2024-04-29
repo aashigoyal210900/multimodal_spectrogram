@@ -46,7 +46,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
   ```python3 create_3d_data.py video_folder spectrogram_folder output_folder```
 
-* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```. ```pretrain_checkpoint``` is optional. ImageNet pretrained model is provided in the ```models``` folder named ```rgb_imagenet.pt```. If ```pretrain_checkpoint``` is missing, the untrained I3D model will be used:
+* Now train your model with any of the following where ```modality``` can be ```[audio, vision, multi]```. ```pretrain_checkpoint``` is optional. The ImageNet pretrained model used here is provided in the ```models``` folder at [pytorch-i3d](https://github.com/piergiaj/pytorch-i3d) named ```rgb_imagenet.pt```. If ```pretrain_checkpoint``` is missing, the untrained I3D model will be used:
 
   ```python3 simple3d_train_test.py modality 3d_data_path output_path```
 
