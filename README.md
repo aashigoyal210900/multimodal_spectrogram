@@ -13,6 +13,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 * TODO (@aashi, @riya): Add similar one-liners for 2DCNNs (ResNet18, VGG16, GoogLeNet).
 
+> **_NOTE:_**  We have retained scripts/notebooks for the subset experiments (pre-midterm) as well. Saved 2D models can be found in these two drives - [GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=sharing) and [GDrive2](https://drive.google.com/drive/folders/1Q1LFiq2KZPyYTuEJhbQY38uu9FE0Jl-g?usp=sharing).
 
 #### For 3D experiments
 
@@ -37,6 +38,3 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
   ```python3 simple3d_ablated_test.py modality /path/to/3d_data /path/to/checkpoint```
 
   ```python3 i3d_ablated_test.py modality /path/to/3d_data /path/to/checkpoint```
-
-
-> **_NOTE:_**  We have retained notebooks/scripts/models for the pre-midterm (subset experiments) as well, in this repository.
