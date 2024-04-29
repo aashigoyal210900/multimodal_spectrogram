@@ -11,9 +11,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
   ```python3 audio_video_vit_fullscale.py path/to/X.npy path/to/y.npy path/to/X_spec.npy, path/to/y_spec.npy```
 
-* TODO (@aashi, @riya): Add similar one-liners for 2DCNNs (ResNet18, VGG16, GoogLeNet).
+* > :warning: **TODO** (@aashi, @riya): Please write a similar description for 2DCNNs (ResNet18, VGG16, GoogLeNet) and add notebooks/scripts in appropriate directories. Once done, you can remove this note.
 
-> **_NOTE:_**  We have retained scripts/notebooks for the subset experiments (pre-midterm) as well. Saved 2D models can be found in these two drives - [GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=sharing) and [GDrive2](https://drive.google.com/drive/folders/1Q1LFiq2KZPyYTuEJhbQY38uu9FE0Jl-g?usp=sharing).
+> **_NOTE:_**  We retained scripts/notebooks for the subset experiments (`273` samples) as well. Saved 2D models can be found in these two drives - [GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=sharing) and [GDrive2](https://drive.google.com/drive/folders/1Q1LFiq2KZPyYTuEJhbQY38uu9FE0Jl-g?usp=sharing).
 
 #### For 3D experiments
 
