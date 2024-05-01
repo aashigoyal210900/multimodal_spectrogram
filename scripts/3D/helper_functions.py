@@ -86,11 +86,11 @@ def collate_fn(batch, max_length, device):
     """
     videos, labels = zip(*batch)
     CHANNELS = videos[0].shape[0]
-    HEIGHT, WIDTH = videos[0].shape[2:]
+    WIDTH, HEIGHT = videos[0].shape[2:]
 
     padded_videos = None
     for video in videos:
-        pad = np.zeros((CHANNELS, max_length-video.shape[1], HEIGHT, WIDTH), dtype=np.int8)
+        pad = np.zeros((CHANNELS, max_length-video.shape[1], WIDTH, HEIGHT), dtype=np.int8)
         padded_video = np.concatenate((video, pad), axis=1)
 
         if (device == "cpu"):
