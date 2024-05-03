@@ -10,7 +10,7 @@ encoders = [
     ['ResNet18', 'GoogLeNet', 'VGG16'],
     # ['Simple3DCNN', 'I3D', 'Ablated I3D'],
     ['Simple3DCNN', 'I3D'],
-    ['ViT', 'VideoMAE']
+    ['ViT', 'PT ViT', 'VideoMAE']
 ]
 
 # Simulated data for each encoder, each with: [Train Accuracy, Test Accuracy]
@@ -47,13 +47,14 @@ data = {
     'Simple3DCNN': [0.647, 0.573],
     'I3D': [0.923, 0.806],
     # 'Ablated I3D' : [0, 0.540],
-    'ViT': [0.6811, 0.5598],
+    'ViT': [0.8042, 0.6895],
+    'PT ViT': [0.9885, 0.6516],
     'VideoMAE': [0.334, 0.366]
 }
 
 # colors = ['#FF9999', '#99CCFF', '#99FF99', '#FFCC99', '#FF99CC', '#CCFF99', '#99FFFF']  # Colors for each encoder
 # colors = ['red', 'green', 'blue', 'cyan', 'orange', 'yellow', 'purple', 'black']  # Colors for each encoder
-colors = ['red', 'green', 'blue', 'cyan', 'orange', 'purple', 'black']  # Colors for each encoder
+colors = ['red', 'green', 'blue', 'cyan', 'orange', 'purple', 'magenta', 'black']  # Colors for each encoder
 # hatches = ['/', '\\', 'o', 'x']  # Different hatches for each metric
 
 # Plotting
@@ -62,7 +63,7 @@ fig, ax = plt.subplots(figsize=(6, 6))
 metric_group_width = 0.8
 bar_width = metric_group_width / (len(encoders[0]) + len(encoders[1]) + len(encoders[2]) + 1)
 x = np.arange(len(metrics_labels)) * (len(encoders[0]) + len(encoders[1]) + len(encoders[2]) + 3) * bar_width
-alpha = {0: 0.6, 1: 0.8, 2: 0.8}
+alpha = {0: 0.6, 1: 0.8, 2: 0.2}
 # Generate the bars
 for i, metric in enumerate(metrics_labels):
     offset = 0  # reset offset for each metric group
