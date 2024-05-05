@@ -4,7 +4,7 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 
 #### For 2D experiments
 
-* Generate Mel spectrograms from WAV audio files by running ```wav_to_melspec.py```<br>
+* Generate mel spectrograms from WAV audio files by running ```wav_to_melspec.py```<br>
   ```python3 wav_to_melspec.py /path/to/WAVFiles /path/to/output```
 
 * Run the notebooks corresponding to `[ResNet18, GoogLeNet, VGG16, ViT, PTViT]` in `/2D` to train the respective encoders on `[audio, vision, multimodal]` data. 
