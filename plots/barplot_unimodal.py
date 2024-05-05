@@ -52,7 +52,7 @@ else:
     exit(1)
 
 # colors = ['#FF9999', '#99CCFF', '#99FF99', '#FFCC99', '#FF99CC', '#CCFF99', '#99FFFF']  # Colors for each encoder
-colors = ['red', 'green', 'blue', 'cyan', 'teal', 'orange', 'yellow', 'purple', 'magenta', 'black']  # Colors for each encoder
+colors = ['red', 'green', 'blue', 'cyan', 'teal', 'orange', 'yellow', 'purple', 'magenta', 'lime']  # Colors for each encoder
 # hatches = ['/', '\\', 'o', 'x']  # Different hatches for each metric
 
 # Plotting
