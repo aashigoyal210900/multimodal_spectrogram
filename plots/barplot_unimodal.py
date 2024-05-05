@@ -9,7 +9,7 @@ group_labels = ['2D CNN', '3D CNN', 'Transformer']
 # Specific encoders for each type
 encoders = [
     ['ResNet18', 'GoogLeNet', 'VGG16'],
-    ['Simple3DCNN', 'I3D', 'Ablated I3D'],
+    ['Simple3D', 'Ablated Simple3D', 'I3D', 'Ablated I3D'],
     ['ViT', 'PT ViT', 'VideoMAE']
 ]
 
@@ -18,26 +18,28 @@ encoders = [
 # Audio
 data_audio = {
     'ResNet18': [0.9848, 0.6182],
-    'GoogLeNet': [0.907, 0.619],
+    'GoogLeNet': [0.9344, 0.6244],
     'VGG16': [0.9113, 0.5962],
-    'Simple3DCNN': [0.519, 0.514],
+    'Simple3D': [0.519, 0.514],
+    'Ablated Simple3D': [0, 0.354],
     'I3D': [0.623, 0.605],
     'Ablated I3D' : [0, 0.448],
     'ViT': [0.4710, 0.4401],
-    'PT ViT': [0.1664, 0.1644],
+    'PT ViT': [0.9846, 0.6231],
     'VideoMAE': [0.344 , 0.372]
 }
 
 # Vision
 data_vision = {
     'ResNet18': [0.9848, 0.6815],
-    'GoogLeNet': [0.866, 0.566],
+    'GoogLeNet': [0.9275, 0.6742],
     'VGG16': [0.9404, 0.6765],
-    'Simple3DCNN': [0.546, 0.462],
+    'Simple3D': [0.546, 0.462],
+    'Ablated Simple3D': [0, 0.298],
     'I3D': [0.878, 0.831],
     'Ablated I3D' : [0, 0.540],
     'ViT': [0.7612, 0.5536],
-    'PT ViT': [0.9962, 0.6749],
+    'PT ViT': [0.9857, 0.6895],
     'VideoMAE': [0.170, 0.188]
 }
 
@@ -50,7 +52,7 @@ else:
     exit(1)
 
 # colors = ['#FF9999', '#99CCFF', '#99FF99', '#FFCC99', '#FF99CC', '#CCFF99', '#99FFFF']  # Colors for each encoder
-colors = ['red', 'green', 'blue', 'cyan', 'orange', 'yellow', 'purple', 'magenta', 'black']  # Colors for each encoder
+colors = ['red', 'green', 'blue', 'cyan', 'teal', 'orange', 'yellow', 'purple', 'magenta', 'black']  # Colors for each encoder
 # hatches = ['/', '\\', 'o', 'x']  # Different hatches for each metric
 
 # Plotting
@@ -59,7 +61,7 @@ fig, ax = plt.subplots(figsize=(6, 6))
 metric_group_width = 0.8
 bar_width = metric_group_width / (len(encoders[0]) + len(encoders[1]) + len(encoders[2]) + 1)
 x = np.arange(len(metrics_labels)) * (len(encoders[0]) + len(encoders[1]) + len(encoders[2]) + 3) * bar_width
-alpha = {0: 0.6, 1: 0.45, 2: 0.45}
+alpha = {0: 0.6, 1: 0.25, 2: 0.65}
 # Generate the bars
 for i, metric in enumerate(metrics_labels):
     offset = 0  # reset offset for each metric group
@@ -100,7 +102,7 @@ ax.grid(axis='y', linestyle='--', alpha=0.7, which='both')
 
 # Add separator lines between each metric group
 for i in range(len(metrics_labels) - 1):
-    ax.axvline(x[i] + (len(encoders[2]) + 7.5) * bar_width, color='black', linestyle='-', linewidth=2)
+    ax.axvline(x[i] + (len(encoders[2]) + 8.5) * bar_width, color='black', linestyle='-', linewidth=2)
 
 
 # ax.axhline(1.0, color='red', linestyle='-', linewidth=2)

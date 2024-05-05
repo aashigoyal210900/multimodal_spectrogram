@@ -9,7 +9,7 @@ group_labels = ['2D CNN', '3D CNN', 'Transformer']
 encoders = [
     ['ResNet18', 'GoogLeNet', 'VGG16'],
     # ['Simple3DCNN', 'I3D', 'Ablated I3D'],
-    ['Simple3DCNN', 'I3D'],
+    ['Simple3D', 'I3D'],
     ['ViT', 'PT ViT', 'VideoMAE']
 ]
 
@@ -42,13 +42,12 @@ encoders = [
 # Multimodal
 data = {
     'ResNet18': [0.9379, 0.7326],
-    'GoogLeNet': [0.925, 0.661],
+    'GoogLeNet': [0.9390, 0.6711],
     'VGG16': [0.9356, 0.6608],
-    'Simple3DCNN': [0.647, 0.573],
+    'Simple3D': [0.647, 0.573],
     'I3D': [0.923, 0.806],
-    # 'Ablated I3D' : [0, 0.540],
     'ViT': [0.8002, 0.6909],
-    'PT ViT': [0.9885, 0.6516],
+    'PT ViT': [0.9867, 0.8290],
     'VideoMAE': [0.334, 0.366]
 }
 
