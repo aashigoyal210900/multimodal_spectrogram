@@ -7,13 +7,9 @@ Contributors - Sai Anuroop Kesanapalli, Riya Ranjan, Aashi Goyal, Wilson Tan
 * Generate Mel spectrograms from WAV audio files by running ```wav_to_melspec.py```<br>
   ```python3 wav_to_melspec.py /path/to/WAVFiles /path/to/output```
 
-* Run ```audio_video_vit_fullscale.py``` to train `ViT` on audio, vision, and multimodal data. Pre-processed data (faces and spectrograms) is stored as ```.npy``` files [here](https://drive.google.com/drive/folders/1RbFeXB-B6r3BBEEsGDGudHrLR6Selkfq?usp=drive_link).
+* Run the notebooks corresponding to `[ResNet18, GoogLeNet, VGG16, ViT, PTViT]` in `/2D` to train the respective encoders on `[audio, vision, multimodal]` data. 
 
-  ```python3 audio_video_vit_fullscale.py path/to/X.npy path/to/y.npy path/to/X_spec.npy, path/to/y_spec.npy```
-
-* > :warning: **TODO** (@aashi, @riya): Please write a similar description for 2DCNNs (ResNet18, VGG16, GoogLeNet) and add notebooks/scripts in appropriate directories. Once done, you can remove this note.
-
-> **_NOTE:_**  We retained scripts/notebooks for the subset experiments (`273` samples) as well. Saved 2D models can be found in these two drives - [GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=sharing) and [GDrive2](https://drive.google.com/drive/folders/1Q1LFiq2KZPyYTuEJhbQY38uu9FE0Jl-g?usp=sharing).
+> **NOTE:** Pre-processed data (faces and spectrograms) is stored as ```.npy``` files in [GDrive1](https://drive.google.com/drive/folders/1BhpgUDgbYwoTaTO6Yo8M3uR0Clw0bkiC?usp=sharing) and [GDrive2](https://drive.google.com/drive/folders/1Q1LFiq2KZPyYTuEJhbQY38uu9FE0Jl-g?usp=sharing). Grayscale and RGB data is used for ```[ResNet18, ViT]``` and ```[GoogLeNet, VGG16, PTViT]``` respectively.
 
 #### For 3D experiments
 
